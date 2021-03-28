@@ -6,9 +6,9 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ main ]
+    branches: [ master ]
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -30,7 +30,7 @@ jobs:
         # uses: appleboy/scp-action@b476d5806f2a4c1ed5902a87fa91b0623cac7258
         uses: appleboy/scp-action@v0.1.1
         with:
-          host: ${{ secrets.REMOTE_HOST_DATICOM }}
+          host: ${{ secrets.REMOTE_HOST }}
           username: ${{ secrets.REMOTE_USER }}
           key: ${{ secrets.SSH_KEY }}
           source: "*"
