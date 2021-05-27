@@ -14,9 +14,14 @@ header{
     align-content: center;
     align-items: center;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.537);
-    padding: 50px 0px;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 100px 0px;
     color: white;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-blend-mode: darken;
+    
+
 }
 
 header h1{
