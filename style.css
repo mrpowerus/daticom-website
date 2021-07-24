@@ -79,11 +79,11 @@ footer {
     align-items: center;
     text-align: center;
     background-color: rgb(0, 0, 0);
+    padding: 10px 0px;
 }
 
 footer p {
     display: inline-block;
     color: white;
-    padding: 5px 0px;
 } 
 
