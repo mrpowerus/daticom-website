@@ -9,7 +9,11 @@ body{
 nav{
     background-color: black;
     margin: 0;
+    z-index: -1;
     text-align: center;
+    position: fixed;
+    width: 100vw;
+    z-index: 1;
 }
 
 .video-overlay {
@@ -18,29 +22,45 @@ nav{
     left: 0;
     right: 0;
     bottom: 0;
-    padding-top: 80px;
+
     display: block;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.2);
 }
 
 .video-overlay img {
-
     max-width: 550px;
     width: 100%;
-    
+    vertical-align: middle;
+    position: relative;
+    height: 100%;
+    object-fit: contain;
+    animation: appear 2s ease, floating 3s ease-in-out infinite;
+    transition: 0.2s;
 }
 
+@keyframes appear {
+ 0%   { 
+ opacity: 0%;	
+ }
+
+ 100% { 
+ opacity: 100%;
+ }
+}
+
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 10px); }
+    100%   { transform: translate(0, -0px); }   
+}
+  
 video {
     position: absolute;
-    z-index: 0;
-    background: url(mel.jpg) no-repeat;
-    background-size: 100% 100%;
+    z-index: -1;
     top: 0px;
     left: 0px; /* fixed to left. Replace it by right if you want.*/
     min-width: 100%;
     min-height: 100%;
-    width: auto;
-    height: auto;
 }
 
 header{
@@ -52,7 +72,6 @@ header{
     position: relative;
     overflow:hidden;
     height:100vh;
-
 }
 
 header h1{
@@ -64,6 +83,7 @@ nav li {
     display: inline-block;
     background-color: rgba(0, 0, 0, 0.727);
     font-size: 1.3em;
+    font-weight: bold;
 }
 
 nav li a{
@@ -74,11 +94,12 @@ nav li a{
 }
 
 nav li:hover{
-    background-color: gray;
+    background-color: grey; 
+    transition: 0.3s;
 }
 
 main {
-    padding: 30px 20px;
+    padding: 50px 20px;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
