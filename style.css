@@ -77,12 +77,11 @@ nav li:hover{
 }
   
 video {
-    position: absolute;
+    position: fixed;
     z-index: -1;
     top: 0px;
     left: 0px; /* fixed to left. Replace it by right if you want.*/
-    min-width: 100%;
-    min-height: 100%;
+    min-height: 100vh;
 }
 
 header{
@@ -103,10 +102,16 @@ header h1{
 
 main {
     padding: 50px 20px;
-    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-    
+    overflow: auto;
+    max-width: 800px;
+
+}
+
+#content{
+    width: 100vw;
+    background-color: rgb(255, 255, 255);
 }
 
 footer {
