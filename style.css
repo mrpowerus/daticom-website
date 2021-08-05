@@ -23,6 +23,12 @@ nav{
     background: rgba(0, 0, 0, 0.5);
 }
 
+.video-overlay img {
+
+    max-width: 550px;
+    width: 100%;
+    
+}
 
 video {
     position: absolute;
@@ -45,7 +51,7 @@ header{
     color: white;
     position: relative;
     overflow:hidden;
-    height:720px
+    height:100vh;
 
 }
 
@@ -72,7 +78,7 @@ nav li:hover{
 }
 
 main {
-    padding: 30px 80px;
+    padding: 30px 20px;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
