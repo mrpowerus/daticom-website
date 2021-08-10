@@ -82,6 +82,7 @@ video {
     top: 0px;
     left: 0px; /* fixed to left. Replace it by right if you want.*/
     min-height: 100vh;
+    min-width: 100vw;
 }
 
 header{
